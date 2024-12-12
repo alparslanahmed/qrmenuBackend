@@ -1,0 +1,26 @@
+[package]
+name = "qrmenuBackend"
+version = "0.1.0"
+edition = "2021"
+publish = false
+
+[workspace]
+members = [".", "entity", "migration"]
+
+[dependencies]
+axum = { version = "0.7.9" }
+axum-extra = { version = "0.9.6", features = ["typed-header"] }
+tokio = { version = "1.42.0", features = ["macros", "rt-multi-thread"] }
+sea-orm = { version = "1.1.2", features = ["sqlx-postgres", "runtime-tokio-rustls", "macros"] }
+dotenv = "0.15.0"
+log = "0.4.22"
+async-trait = "0.1.83"
+entity = { path = "entity" }
+migration = { path = "migration" }
+serde = { version = "1.0.216", features = ["derive"] }
+jsonwebtoken = "9.3.0"
+chrono = "0.4.39"
+bcrypt = "0.16.0"
+anyhow = "1.0.94"
+headers = "0.4.0"
+tower-http = { version = "0.6.2", features = ["cors"] }
