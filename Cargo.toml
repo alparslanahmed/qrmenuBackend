@@ -18,7 +18,7 @@ async-trait = "0.1.83"
 entity = { path = "entity" }
 migration = { path = "migration" }
 serde = { version = "1.0.216", features = ["derive"] }
-jsonwebtoken = "9.3.0"
+jsonwebtoken = "10.3.0"
 chrono = "0.4.39"
 bcrypt = "0.16.0"
 anyhow = "1.0.94"
